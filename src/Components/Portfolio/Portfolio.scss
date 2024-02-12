@@ -1,0 +1,132 @@
+@import  "../../App.scss";
+
+.portfolio {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 27px;
+
+    @include tablet{
+      font-size: 20px;
+      padding-top: calc(100vh - 80px);
+    }
+
+    h1{
+      @include mobile{
+        font-weight: normal;
+        font-size: 24px;
+      }
+    }
+
+    .proressBar {
+      height: 5px;
+      border-radius: 20px;
+      background-color: #fff;
+
+      @include tablet{
+        height: 3px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      width: 80%;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      @include tablet{
+        width: 95%;
+      }
+
+      @include tablet-mini{
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .imgContainer {
+        flex: 1;
+        height: 50%;
+        height: auto;;
+
+        @include tablet-mini{
+          width: 100%;
+          height: 50px;
+        }
+
+        @include mobile {
+          flex: 0;
+          height: 200px;
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include tablet-mini{
+          transform: none !important;
+          text-align: center;
+          gap: 10px;
+        }
+        
+        h2{
+          font-size: 50px;
+
+          @include tablet{
+            font-size: 30px;
+            font-weight: 400;
+          }
+        }
+
+        p{
+          color: gray;
+          font-size: 15px;
+        }
+
+        button{
+          background-color: orange;
+          cursor: pointer;
+          border: none;
+          color: white;
+          padding: 10px;
+          width: 200px;
+          border-radius: 10px;
+          font-weight: normal;
+          font-size: 20px;
+
+          @include tablet-mini{
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}

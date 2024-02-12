@@ -1,0 +1,168 @@
+@import "../../App.scss";
+
+.services {
+  height: 100%;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+
+      @include mobile{
+        font-weight: 100;
+    font-size: 15px;
+      }
+    }
+
+    hr {
+      width: 300px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include tablet {
+        width: 200px;
+      }
+
+      @include tablet-mini {
+      width: 100px;
+      }
+
+      @include mobile{
+        width: 0;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile{
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+      }
+
+      img {
+        width: 200px;
+        height: 70px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include tablet {
+          width: 170px;
+          height: 60px;
+        }
+
+        @include tablet-mini {
+          width: 150px;
+          height: 40px;
+         }
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: 100;
+
+        b{
+          @include mobile{
+            font-weight: 100;
+          }
+        }
+
+        @include tablet {
+          font-size: 50px;
+        }
+
+        @include tablet-mini {
+          font-size: 35px;
+        }
+        
+        @include mobile{
+          font-size: 25px;
+        }
+      }
+
+      button {
+        width: 200px;
+        height: 80px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include tablet {
+          width: 170px;
+          height: 60px;
+          font-size: 20px;
+        }
+
+        @include tablet-mini {
+          width: 150px;
+          height: 40px;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px 30px;
+   
+    &::-webkit-scrollbar {
+       height: 3px;
+     }
+    &::-webkit-scrollbar-thumb {
+      background-color: orange;  
+ 
+      border-radius: 6px;  
+     }
+
+   
+
+    .box {
+      padding: 20px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      min-width: 270px;
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
